@@ -36,7 +36,7 @@ def topmovies(movies):
 	for i in range(len(userinput)):
 		for j in range(len(movies['title'].values)):
 			if userinput[i]['title'] != movies['title'].values[j]:
-			final_movies.append(movies['title'].values[j])
+				final_movies.append(movies['title'].values[j])
 
 	final_movies = set(final_movies)
 	final_movies = (list(final_movies))
