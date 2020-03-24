@@ -62,11 +62,12 @@ def recommend():
 	movies = userProfile(userinput)
 	
 	r = topmovies(movies)
-        movie = movie.upper()
-        if type(r)==type('string'):
-        	return render_template('recommend.html',movie=movie,r=r,t='s')
-    	else:
-        	return render_template('recommend.html',movie=movie,r=r,t='l')
+	
+	return render_template('recommend.html',movie=title,r=r)
+        #if type(r)==type('string'):
+        	#return render_template('recommend.html',movie=title,r=r,t='s')
+    	#else:
+        	#return render_template('recommend.html',movie=title,r=r,t='l')
 
 
 
