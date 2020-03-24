@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from math import sqrt
+#from math import sqrt
 from flask import Flask, render_template, request
 # libraries for making count matrix and similarity matrix
 #from sklearn.feature_extraction.text import CountVectorizer
