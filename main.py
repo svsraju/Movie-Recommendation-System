@@ -53,7 +53,7 @@ def home():
 def recommend():
 	userinput = []
 	key_values = {}
-    title = request.args.get('movie')
+        title = request.args.get('movie')
 	rating = request.args.get('rating')
 	key_values['title'] = title
 	key_values['rating'] = rating
@@ -62,11 +62,11 @@ def recommend():
 	movies = userProfile(userinput)
 	
 	r = topmovies(movies)
-    movie = movie.upper()
-    if type(r)==type('string'):
-        return render_template('recommend.html',movie=movie,r=r,t='s')
-    else:
-        return render_template('recommend.html',movie=movie,r=r,t='l')
+        movie = movie.upper()
+        if type(r)==type('string'):
+        	return render_template('recommend.html',movie=movie,r=r,t='s')
+    	else:
+        	return render_template('recommend.html',movie=movie,r=r,t='l')
 
 
 
