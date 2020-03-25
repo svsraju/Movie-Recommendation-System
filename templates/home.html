@@ -1,13 +1,59 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="shadow p-3 mb-5 bg-white rounded">
-  <h1 style="color:rgb(0, 102, 255)">Welcome to the Movie recommender</h1>
-  <h3 style="color:rgb(0, 102, 255)">Enter the Hollywood movie you like to get recommendations.</h3>
+  <h1 style="color:rgb(0, 102, 255)">Welcome to the Movie recommender System</h1>
+  <h3 style="color:rgb(0, 102, 255)">Please Read these Instrictions</h3>
+  <p style="color:rgb(0, 102, 255)">The Following is a Content Based Recommendation System.Before We can suggest you the movies you might like, we need to understand you better. For that you need to gives us information about some movies which you liked or disliked.</p> 
+  <p style="color:rgb(0, 102, 255)"> Please enter any movie name(Make sure the movie exists) 
+ and give a rating between 1 and 5 where 5 would be for the movie you loved the most.You can give decimal ratings too!!.To get better results try to give best and worst movies. 
+Once you enter this information the recommender system will analyze your interests and suggest you top 10 movies which you might like!!. Test it out yourself.</p>  
+
 </div>
 
   <form action="{{url_for('recommend')}}">
-    <input type="text" name="movie" class="form-control" placeholder="Movie name here">
-    <br>
+    <table id="linkTable">
+    <tbody><tr class="tr_clone" id="addrow">
+        <td>Title: </td>
+        <td><input type="text" name="movie" class="form-control" placeholder="Movie name here" required /></td>
+        <td>Rating: </td>
+        <td><input type="text" name="rating" class="form-control" placeholder="Movie rating here(1 to 5)" required /></td>
+        
+</tbody>
+
+<tbody><tr class="tr_clone" id="addrow">
+        <td>Title: </td>
+        <td><input type="text" name="movie2" class="form-control" placeholder="Movie name here" required /></td>
+        <td>Rating: </td>
+        <td><input type="text" name="rating2" class="form-control" placeholder="Movie rating here(1 to 5)" required /></td>
+        
+</tbody>
+
+<tbody><tr class="tr_clone" id="addrow">
+        <td>Title: </td>
+        <td><input type="text" name="movie3" class="form-control" placeholder="Movie name here" required /></td>
+        <td>Rating: </td>
+        <td><input type="text" name="rating3" class="form-control" placeholder="Movie rating here(1 to 5)" required /></td>
+        
+</tbody>
+
+<tbody><tr class="tr_clone" id="addrow">
+        <td>Title: </td>
+        <td><input type="text" name="movie4" class="form-control" placeholder="Movie name here" required /></td>
+        <td>Rating: </td>
+        <td><input type="text" name="rating4" class="form-control" placeholder="Movie rating here(1 to 5)" required /></td>
+        
+</tbody>
+
+<tbody><tr class="tr_clone" id="addrow">
+        <td>Title: </td>
+        <td><input type="text" name="movie5" class="form-control" placeholder="Movie name here" required /></td>
+        <td>Rating: </td>
+        <td><input type="text" name="rating5" class="form-control" placeholder="Movie rating here(1 to 5)" required /></td>
+        
+</tbody>
+
+
+</table>
     <input type="submit" class="btn btn-info" value="Enter">
   </form>
 {% endblock %}

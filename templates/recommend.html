@@ -1,9 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
+  
+  {% if t=='s' %}
+  
+  <div class="shadow p-3 mb-5 bg-white rounded">
+    <h3 style="color:rgb(0, 102, 255)">Sorry! It looks like you have entered same Movie Name more than once!!.</h3>
+    <h3 style="color:rgb(0, 102, 255)">we are only trying to understand you better!! Please check your input.</h3>
+    <h3 style="color:rgb(0, 102, 255)">You will get best results!!.</h3>
+	
+	<h3 style="color:rgb(0, 102, 255)">select on Home to go back.</h3>
+  </div>
+
+  {% else %}
 
   <div class="shadow p-3 mb-5 bg-white rounded">
-    <h1 style="color:rgb(0, 102, 255)">"{{movie}}" is a great choice.</h1>
-    <h3 style="color:rgb(0, 102, 255)">Here are some more like this</h3>
+    <h1 style="color:rgb(0, 102, 255)">Looks like you are a movie buff!! great choices.</h1>
+    <h3 style="color:rgb(0, 102, 255)">Here are some more which we think might be of your interests. Try them!!</h3>
   </div>
 
     <ul class="list-group list-group-flush">
@@ -11,5 +23,6 @@
         <li class="list-group-item" style="color:rgb(0, 179, 0)"><strong>{{m|capitalize}}</strong></li>
       {% endfor %}
     </ul>
+  {% endif %}
 
 {% endblock %}
